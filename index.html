@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <h1><img src="Logo.jpg" alt="Gomez Rentalz" style="width:140px;Height:100px;"></h1>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body{
+    background-color: rgb(142,142,134);
+  }
+  @font-face {
+        font-family: 'Pirata-One';
+        src: url('fonts/Pirata_One.woff2') format('woff2'),
+             url('fonts/Pirata_One.woff') format('woff'),
+             url('fonts/PirataOne-regular.tff') format('truetype');
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: 'Pirata-One', Arial, 'sans_serif';
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 20px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: blue;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #000ff;
+}
+
+.show {
+  display: block;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#home">Home</a> 
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Content
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="#">Bounce Houses</a>
+    <a href="#">Tables w/ Chairs</a>
+    <a href="#">Other</a>
+  </div>
+  </div> 
+  <a href="#news">About Us</a>
+ 
+</div>
+
+<h3><h3>
+<a href="https://www.instagram.com/gomez.rentalz/?hl=en" target="_blank">Follow Us On Instagram!!</a>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
